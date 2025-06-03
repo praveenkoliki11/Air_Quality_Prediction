@@ -1,4 +1,4 @@
-# Air Quality Index Prediction System
+# Air Quality Index Prediction
 
 This project is a web application that predicts Air Quality Index (AQI) using machine learning models with a Flask backend and modern frontend technologies.
 
