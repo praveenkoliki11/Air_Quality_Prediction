@@ -179,4 +179,4 @@ Contributions are welcome! Please follow these steps:
 
 ## Publication
 
-This project is published under the  Journal of Emerging Technologies and Innovative Research (ISSN : 2349-5162) - see the [http://www.jetir.org/view?paper=JETIR2504575](LICENSE) file for details.
+This project is published under the  Journal of Emerging Technologies and Innovative Research (ISSN : 2349-5162) - see the [LICENSE](http://www.jetir.org/view?paper=JETIR2504575) file for details.
