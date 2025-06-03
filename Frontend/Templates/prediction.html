@@ -1,0 +1,103 @@
+{% extends 'index.html' %}
+
+{% block navbar %}
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+            <a class="nav-link" href="{{url_for('home')}}" style="color: white;">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{url_for('about')}}" style="color: white; padding-left: 30px;">About</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{url_for('prediction')}}" style="color: yellow; padding-left: 30px;">Prediction</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{url_for('index')}}" style="color: white; padding-left: 30px;">Logout</a>
+        </li>
+    </ul>
+{% endblock %}
+
+
+{% block content %}
+    <center>
+        <div style="margin-top: 50px; min-height: 1500px; height: auto; background-color: rgba(0, 0, 0, 0.655);">
+            <div class="container-fluid" style="margin-top: -50px;">
+                <div class="contact_section_2">
+                    <div class="row">
+
+                        {% if result %}
+                            <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; width: 100%; padding: 20px;">
+                                <h2 style="color: yellow;"><b style="color: green;">Predicted Air Quality: </b>{{result}}</h2>
+                            </div>
+                        {% endif %}
+    
+                        <div class="col-md-12">
+                            <form action="{{url_for('prediction')}}" method="post" enctype="multipart/form-data" style="background-color: rgba(36, 158, 164, 0.879); width: 600px; border-radius: 10px; margin-top: 0px; margin-left: 30px; padding: 20px;">
+                                <h1 class="contact_taital" style="color: rgba(0, 0, 0, 0.849);"><br>Input data here!</h1>
+    
+                                <div class="col-10">
+    
+                                    <select name="City" class="mail_text" required>
+                                        <option value="">Choose Weather Condition</option>
+                                        <option value="Delhi">Delhi</option>
+                                        <option value="Bengaluru">Bengaluru</option>
+                                        <option value="Lucknow">Lucknow</option>
+                                        <option value="Chennai">Chennai</option>
+                                        <option value="Hyderabad">Hyderabad</option>
+                                        <option value="Patna">Patna</option>
+                                        <option value="Gurugram">Gurugram</option>
+                                        <option value="Ahmedabad">Ahmedabad</option>
+                                        <option value="Visakhapatnam">Visakhapatnam</option>
+                                        <option value="Amritsar">Amritsar</option>
+                                        <option value="Jaipur">Jaipur</option>
+                                        <option value="Thiruvananthapuram">Thiruvananthapuram</option>
+                                        <option value="Amaravati">Amaravati</option>
+                                        <option value="Mumbai">Mumbai</option>
+                                        <option value="Jorapokhar">Jorapokhar</option>
+                                        <option value="Kolkata">Kolkata</option>
+                                        <option value="Brajrajnagar">Brajrajnagar</option>
+                                        <option value="Talcher">Talcher</option>
+                                        <option value="Guwahati">Guwahati</option>
+                                        <option value="Coimbatore">Coimbatore</option>
+                                        <option value="Chandigarh">Chandigarh</option>
+                                        <option value="Bhopal">Bhopal</option>
+                                        <option value="Shillong">Shillong</option>
+                                        <option value="Kochi">Kochi</option>
+                                        <option value="Ernakulam">Ernakulam</option>
+                                        <option value="Aizawl">Aizawl</option>
+                                    </select>     
+                                    
+                                    <input type="number" step="0.000001" name="PM2" class="mail_text" placeholder="Enter PM2 (Fine inhalable particles ≤2.5 micrometers in diameter) value" required>
+
+                                    <input type="number" step="0.000001" name="PM10" class="mail_text" placeholder="Enter PM10 (Coarse particles ≤10 micrometers) value" required>
+
+                                    <input type="number" step="0.000001" name="NO" class="mail_text" placeholder="Enter NO (Nitric Oxide) value" required>
+
+                                    <input type="number" step="0.000001" name="NO2" class="mail_text" placeholder="Enter NO2 (Nitrogen Dioxide) value" required>
+
+                                    <input type="number" step="0.000001" name="NOx" class="mail_text" placeholder="Enter NOx (Sum of NO and NO2) value" required>
+
+                                    <input type="number" step="0.000001" name="NH3" class="mail_text" placeholder="Enter NH3 (Ammonia concentration) value" required>
+
+                                    <input type="number" step="0.000001" name="CO" class="mail_text" placeholder="Enter CO (Carbon Monoxide concentration) value" required>
+
+                                    <input type="number" step="0.000001" name="SO2" class="mail_text" placeholder="Enter SO2 (Sulfur Dioxide concentration) value" required>
+
+                                    <input type="number" step="0.000001" name="O3" class="mail_text" placeholder="Enter O3 (Ozone concentration) value" required>
+
+                                    <input type="number" step="0.000001" name="Benzene" class="mail_text" placeholder="Enter Benzene (Benzene concentration) value" required>
+
+                                    <input type="number" step="0.000001" name="Toluene" class="mail_text" placeholder="Enter Toluene (Toluene concentration) value" required>
+
+                                    
+                                    <button type="submit" class="btn btn-success" style="margin-top: 20px; width: 30%;">Submit</button><br><br>
+                                </div>
+                            </form><br><br>
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </center>
+{% endblock %}

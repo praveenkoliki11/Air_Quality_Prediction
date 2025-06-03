@@ -1,0 +1,45 @@
+{% extends 'index.html' %}
+
+{% block navbar %}
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+            <a class="nav-link" href="{{url_for('home')}}" style="color: white;">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{url_for('about')}}" style="color: yellow; padding-left: 30px;">About</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{url_for('prediction')}}" style="color: white; padding-left: 30px;">Prediction</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{url_for('index')}}" style="color: white; padding-left: 30px;">Logout</a>
+        </li>
+    </ul>
+{% endblock %}
+               
+
+{% block content %}
+    <div class="banner_section layout_padding" style="display: flex; align-items: center; justify-content: center; height: 100vh; background-color: rgba(0, 0, 0, 0.63);">
+        <div class="container">
+            <div id="banner_slider" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row justify-content-center">
+                        <div class="banner_taital_main text-center" style="margin-top: -110px;">
+                            
+                            <h1 class="banner_taital" style="color: white;">About!</h1>
+                            <p class="banner_text" style="color: white; padding: 30px; text-align: justify;">
+                                Air pollution poses a critical threat to public health and environmental sustainability across India, contributing to over 1.2 million annual deaths. To address this challenge, our project leverages machine learning to predict air quality levels (Good, Moderate, Poor) using historical data from 25+ Indian cities (2015–2020). By analyzing pollutants like PM2.5, NO2, and O3, we combine advanced techniques such as SMOTE for class balancing and XGBoost modeling to achieve 94% prediction accuracy. The system not only forecasts air quality but also identifies key pollutants through explainable AI (SHAP values), offering actionable insights for citizens, urban planners, and policymakers. Features include real-time city-specific predictions, interactive pollution trend visualizations, and alerts for high-risk days, empowering users to make informed decisions—from planning outdoor activities to designing emission control policies. Built with Python, Scikit-learn, and Flask, our scalable solution adapts to geographic variations, ensuring relevance for cities like Delhi or Bengaluru. Future goals include expanding to 100+ cities with IoT integration and developing a mobile app for personalized health recommendations. Driven by the mission “Breathe Smarter, Forecast Cleaner,” we aim to transform air quality management into a proactive, data-driven effort, safeguarding communities and fostering sustainable urban growth. Join us in making clean air a fundamental right, not a privilege.
+                            </p>
+                            <h5 class="tasty_text">
+                                "Breathe Smarter, Forecast Cleaner." 💨✨
+                            </h5>
+                            
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
