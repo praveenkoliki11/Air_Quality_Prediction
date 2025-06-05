@@ -38,7 +38,7 @@ This project is a web application that predicts Air Quality Index (AQI) using ma
 ### Backend Setup
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/air-quality-prediction.git
+   git clone https://github.com/praveenkoliki11/Air_Quality_Prediction.git
    cd air-quality-prediction
    ```
 
